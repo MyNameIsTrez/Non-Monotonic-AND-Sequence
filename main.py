@@ -9,9 +9,14 @@ def main(binary_fn):
 	right = 0
 	while True:
 		sequence = get_sequence(right, binary_fn)
+
 		if is_monotonic(sequence, non_monotonic_strings):
 			print(f"right: {right}, monotonic sequence: {sequence}\n")
+
 		right += 1
+
+		if right % 1000 == 0:
+			print(right)
 
 
 def get_non_monotonic_strings():
@@ -34,12 +39,12 @@ def get_sequence(right, binary_fn):
 	3 -> 0b011 -> 2 ** (1 + 1) -> 4
 	4 -> 0b100 -> 2 ** (2 + 1) -> 8
 	"""
-	x = []
+	sequence_parts = []
 
 	for left in range(2 ** (get_most_significant_bit_index(right) + 1)):
-		x.append(str(binary_fn(left, right)))
+		sequence_parts.append(str(binary_fn(left, right)))
 
-	return "".join(x)
+	return "".join(sequence_parts)
 
 
 def get_most_significant_bit_index(n):
