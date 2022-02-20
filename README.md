@@ -1,0 +1,1 @@
+# Non-Monotonic-AND-Sequence
