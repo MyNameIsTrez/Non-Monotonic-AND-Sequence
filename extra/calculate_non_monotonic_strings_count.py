@@ -1,3 +1,8 @@
+def main():
+	non_monotonic_strings_count = calculate_non_monotonic_strings_count()
+	print(non_monotonic_strings_count)
+
+
 def calculate_non_monotonic_strings_count():
 	n = 0
 
@@ -6,11 +11,6 @@ def calculate_non_monotonic_strings_count():
 				n += i
 
 	return n
-
-
-def main():
-	non_monotonic_strings_count = calculate_non_monotonic_strings_count()
-	print(non_monotonic_strings_count)
 
 
 if __name__ == "__main__":

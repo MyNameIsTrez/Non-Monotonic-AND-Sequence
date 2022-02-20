@@ -1,6 +1,12 @@
 import pprint
 
 
+def main():
+	non_monotonic_strings_dict = get_non_monotonic_strings_dict()
+	# This can be piped to a file for easier viewing.
+	pprint.pprint(non_monotonic_strings_dict, width=160)
+
+
 def get_non_monotonic_strings_dict():
 	non_monotonic_strings_dict = {}
 
@@ -15,12 +21,6 @@ def get_non_monotonic_strings_dict():
 					non_monotonic_strings_dict[i][j][k] = f"{i}{j}{k}"
 
 	return non_monotonic_strings_dict
-
-
-def main():
-	non_monotonic_strings_dict = get_non_monotonic_strings_dict()
-	# This can be piped to a file for easier viewing.
-	pprint.pprint(non_monotonic_strings_dict, width=160)
 
 
 if __name__ == "__main__":
