@@ -25,12 +25,12 @@ def get_sequence(right, binary_fn):
 	3 -> 0b011 -> 2 ** (1 + 1) -> 4
 	4 -> 0b100 -> 2 ** (2 + 1) -> 8
 	"""
-	sequence_parts = []
+	sequence = []
 
 	for left in range(2 ** (get_most_significant_bit_index(right) + 1)):
-		sequence_parts.append(str(binary_fn(left, right)))
+		sequence.append(binary_fn(left, right))
 
-	return "".join(sequence_parts)
+	return sequence
 
 
 def get_most_significant_bit_index(n):
@@ -69,7 +69,7 @@ def is_monotonic(sequence):
 
 
 def get_slope_direction(a, b):
-	n = int(b) - int(a)
+	n = b - a
 
 	if n > 0:
 		return 1
