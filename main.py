@@ -38,10 +38,12 @@ def get_most_significant_bit_index(n):
 	See https://stackoverflow.com/a/4970859/13279557
 	"""
 	i = 0
+
 	n >>= 1
 	while (n > 0):
 		i += 1
 		n >>= 1
+
 	return i
 
 
@@ -68,6 +70,7 @@ def is_monotonic(sequence):
 
 def get_slope_direction(a, b):
 	n = int(b) - int(a)
+
 	if n > 0:
 		return 1
 	elif n == 0:
