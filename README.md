@@ -1,11 +1,4 @@
 # Non-Monotonic-AND-Sequence
-<!--
-Say that we have a function
-
-```py
-for i in range(42):
-	i & 0
-``` -->
 
 `i & 0` -> `00`
 
