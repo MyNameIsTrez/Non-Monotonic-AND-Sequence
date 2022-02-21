@@ -1,5 +1,7 @@
 # Non-Monotonic-AND-Sequence
 
+If you start `i` at `1` and keep increasing it by `1`, you get these sequences. I've used `…` to denote where they start repeating themselves:
+
 `i & 0` -> `0…`
 
 `i & 1` -> `01…`
@@ -23,6 +25,8 @@
 Although a sequence could still look random while only increasing (`0189`) or decreasing, `i & 5` its sequence looks more random due to it being the only non-monotonic one:
 
 > […] is called monotonic if and only if it is either entirely non-increasing, or entirely non-decreasing. That is, […] a function that increases monotonically does not exclusively have to increase, it simply must not decrease.
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Monotonic_function).
 
 In other words, a non-monotonic function goes up and down/down and up (before the sequence repeats itself). `011` is monotonic, `010` is non-monotonic.
 
